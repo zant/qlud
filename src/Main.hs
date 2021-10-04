@@ -1,11 +1,11 @@
 module Main where
 
 import Generator (generate)
-import Parser
+import Parser ()
 import qualified Parser as P
-import System.Directory
-import System.Environment
-import System.FilePath
+import System.Directory (getCurrentDirectory)
+import System.Environment (getArgs)
+import System.FilePath ((</>))
 import System.Posix.Internals (newFilePath)
 
 main :: IO ()
