@@ -1,0 +1,22 @@
+cradle:
+  stack:
+    - path: "./src/Main.hs"
+      component: "qlud:exe:qlud"
+
+    - path: "./src/FieldDefinition.hs"
+      component: "qlud:exe:qlud"
+
+    - path: "./src/Lexer.hs"
+      component: "qlud:exe:qlud"
+
+    - path: "./src/ObjectTypeDefinition.hs"
+      component: "qlud:exe:qlud"
+
+    - path: "./src/Parser.hs"
+      component: "qlud:exe:qlud"
+
+    - path: "./src/Generator.hs"
+      component: "qlud:exe:qlud"
+
+    - path: "./src/Paths_qlud.hs"
+      component: "qlud:exe:qlud"

@@ -1,0 +1,5 @@
+type Project { 
+	name: String
+	decimals: Number
+	value: Number
+}
