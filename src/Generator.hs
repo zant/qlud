@@ -15,13 +15,13 @@ generate :: FilePath -> IO ()
 generate path = do
   input <- readFile path
   dir <- getCurrentDirectory
-  entityTemplate <- readFile $ dir </> "src/templates/Entity"
+  entityTemplate <- readFile $ dir </> "src/templates/Entity.ts"
 
   case parseQlud input of
     Left err -> print $ "Error" ++ show err
     Right val -> do
       let entity = ObjectTypeDefinition.name val
-      let res = replace (pack "{{entity}}") (pack entity) $ pack entityTemplate
+      let res = replace (pack "__entity__") (pack entity) $ pack entityTemplate
       let path = dir </> "gen/" ++ entity ++ ".ts"
       writeFileForce path $ unpack res
 
